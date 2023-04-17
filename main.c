@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "binaryset.h"
+
+
+int main() {
+    BinaryNode_t *binaryHeadNode = NULL;
+    BinaryNode_t *binaryTemporaryNode;
+    int setLen, isUnique, decimalNum;
+    int i = 0;
+    char setLenStr[DATA_SIZE], data[DATA_SIZE], binaryNum[DATA_SIZE];
+    do {
+        puts("Enter size of binary digit set");
+        scanf("%s", setLenStr);
+    } while (!isInt(setLenStr));
+    setLen = strtol(setLenStr, NULL, 10);
+    puts("Enter set components");
+    while (i < setLen) {
+        scanf("%s", data);
+        if (isBinary(data)) {
+            isUnique = isUniqueNode(binaryHeadNode, data);
+            if (isUnique) {
+                binaryTemporaryNode = createBinaryNode(data);
+                binaryTemporaryNode->pointer = binaryHeadNode;
+                binaryHeadNode = binaryTemporaryNode;
+                i++;
+            } else
+                puts("This number is not unique! Try again");
+        } else
+            puts("Please enter a binary digit!");
+    }
+    puts("Binary set:");
+    printBinarySet(binaryHeadNode);
+    BinaryNode_t *currentNode = binaryHeadNode;
+    puts("Converted binary set:");
+    while (currentNode != NULL) {
+        strcpy(binaryNum, currentNode->data);
+        currentNode = currentNode->pointer;
+        decimalNum = binaryToDec(binaryNum);
+        printf("%d\n", decimalNum);
+    }
+}
