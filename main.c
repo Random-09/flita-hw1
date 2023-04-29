@@ -6,8 +6,8 @@
 int main() {
     BinaryNode_t *binaryHeadNode = NULL;
     BinaryNode_t *binaryTemporaryNode;
-    uint8_t setLen, isUnique, decimalNum;
-    uint8_t i = 0;
+    int8_t setLen, isUnique, decimalNum;
+    int8_t i = 0;
     char setLenStr[DATA_SIZE],data[DATA_SIZE], binaryNum[DATA_SIZE];
     do {
         puts("Enter size of binary digit set");
