@@ -36,7 +36,7 @@ int main() {
     while (currentNode != NULL) {
         strcpy(binaryNum, currentNode->data);
         currentNode = currentNode->pointer;
-        decimalNum = binaryToDec(binaryNum);
+        decimalNum = (int8_t) binaryToDec(binaryNum);
         printf("%d\n", decimalNum);
     }
     deleteBinarySet(binaryHeadNode);
