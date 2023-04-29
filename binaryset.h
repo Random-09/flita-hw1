@@ -15,6 +15,8 @@ typedef struct binaryNode {
 
 BinaryNode_t *createBinaryNode(char *data);
 
+void deleteBinarySet(BinaryNode_t *head);
+
 void printBinarySet(BinaryNode_t *head);
 
 int isUniqueNode(BinaryNode_t *head, char *data);

@@ -1,15 +1,13 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include "binaryset.h"
-
 
 int main() {
     BinaryNode_t *binaryHeadNode = NULL;
     BinaryNode_t *binaryTemporaryNode;
     int setLen, isUnique, decimalNum;
     int i = 0;
-    char setLenStr[DATA_SIZE], data[DATA_SIZE], binaryNum[DATA_SIZE];
+    char setLenStr[DATA_SIZE],data[DATA_SIZE], binaryNum[DATA_SIZE];
     do {
         puts("Enter size of binary digit set");
         scanf("%s", setLenStr);
@@ -40,4 +38,6 @@ int main() {
         decimalNum = binaryToDec(binaryNum);
         printf("%d\n", decimalNum);
     }
+    deleteBinarySet(binaryHeadNode);
+    return EXIT_SUCCESS;
 }

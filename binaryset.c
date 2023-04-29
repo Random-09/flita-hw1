@@ -7,6 +7,15 @@ BinaryNode_t *createBinaryNode(char *data) {
     return node;
 }
 
+void deleteBinarySet(BinaryNode_t *head) {
+    BinaryNode_t *temporary;
+    while (head != NULL) {
+        temporary = head;
+        head = head->pointer;
+        free(temporary);
+    }
+}
+
 void printBinarySet(BinaryNode_t *head) {
     BinaryNode_t *temporary = head;
     while (temporary != NULL) {
@@ -37,7 +46,7 @@ int isBinary(char data[]) {
     return isBinary;
 }
 
-int isInt(char setLenStr[DATA_SIZE]) {
+int isInt(char setLenStr[64]) {
     for (int i = 0; i < strlen(setLenStr); i++) {
         if (!isdigit(setLenStr[i]))
             return 0;
