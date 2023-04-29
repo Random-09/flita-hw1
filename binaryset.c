@@ -57,7 +57,7 @@ int isInt(char setLenStr[64]) {
 int binaryToDec(char *data) {
     int pow = 1;
     int decimalNum = 0;
-    for (int i = strlen(data) - 1; i != -1; i--) {
+    for (int i = (int) strlen(data) - 1; i != -1; i--) {
         if (data[i] == '1')
             decimalNum += pow;
         pow <<= 1;

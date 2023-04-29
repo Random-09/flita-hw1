@@ -1,3 +1,8 @@
 # ninja log v5
 4	175	7022078707810082	CMakeFiles/flita_hw1.dir/main.c.obj	92d9d36900683ca6
 176	384	7022078709635061	flita_hw1.exe	6af9409cd703812a
+4	214	7044542528736258	CMakeFiles/flita_hw1.dir/main.c.obj	92d9d36900683ca6
+15	216	7044542528757032	CMakeFiles/flita_hw1.dir/binaryset.c.obj	4811d65e39e011b3
+216	437	7044542530861661	flita_hw1.exe	7ecebefe7a4cb33d
+8	216	7044817627746423	CMakeFiles/flita_hw1.dir/binaryset.c.obj	4811d65e39e011b3
+217	726	7044817632730565	flita_hw1.exe	7ecebefe7a4cb33d
