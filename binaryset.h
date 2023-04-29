@@ -5,6 +5,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdbool.h>
+#include <stdint.h>
 
 #define DATA_SIZE 64
 
@@ -15,15 +17,19 @@ typedef struct binaryNode {
 
 BinaryNode_t *createBinaryNode(char *data);
 
+void binarySetInput(BinaryNode_t **binaryHeadNode);
+
 void deleteBinarySet(BinaryNode_t *head);
 
 void printBinarySet(BinaryNode_t *head);
 
-int isUniqueNode(BinaryNode_t *head, char *data);
+bool isUniqueNode(BinaryNode_t *head, char *data);
 
-int isBinary(char data[]);
+bool isBinary(char data[]);
 
-int isInt(char setLenStr[DATA_SIZE]);
+bool isInt(char setLenStr[DATA_SIZE]);
+
+void printDecimalSet(BinaryNode_t *binaryHeadNode);
 
 int binaryToDec(char *data);
 
