@@ -13,12 +13,12 @@ int main() {
         puts("Enter size of binary digit set");
         scanf("%s", setLenStr);
     } while (!isInt(setLenStr));
-    setLen = strtol(setLenStr, NULL, 10);
+    setLen = (int8_t) strtol(setLenStr, NULL, 10);
     puts("Enter set components");
     while (i < setLen) {
         scanf("%s", data);
         if (isBinary(data)) {
-            isUnique = isUniqueNode(binaryHeadNode, data);
+            isUnique = (int8_t) isUniqueNode(binaryHeadNode, data);
             if (isUnique) {
                 binaryTemporaryNode = createBinaryNode(data);
                 binaryTemporaryNode->pointer = binaryHeadNode;
