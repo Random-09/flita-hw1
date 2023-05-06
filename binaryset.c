@@ -54,10 +54,10 @@ void printBinarySet(BinaryNode_t *head) {
 bool isUniqueNode(BinaryNode_t *head, char *data) {
     while (head != NULL) {
         if (strcmp(head->data, data) == 0)
-            return 0;
+            return false;
         head = head->pointer;
     }
-    return 1;
+    return true;
 }
 
 bool isBinary(char data[]) {
@@ -75,9 +75,9 @@ bool isBinary(char data[]) {
 bool isInt(char setLenStr[64]) {
     for (int i = 0; i < strlen(setLenStr); i++) {
         if (!isdigit(setLenStr[i]))
-            return 0;
+            return false;
     }
-    return 1;
+    return true;
 }
 
 void printDecimalSet(BinaryNode_t *binaryHeadNode) {
