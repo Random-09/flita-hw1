@@ -2,7 +2,7 @@
 #include "binaryset.h"
 
 int main() {
-    BinaryNode_t *binaryHeadNode = NULL;
+    BinaryNode_t* binaryHeadNode = NULL;
     binarySetInput(&binaryHeadNode);
     printBinarySet(binaryHeadNode);
     printDecimalSet(binaryHeadNode);
