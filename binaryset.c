@@ -26,7 +26,7 @@ void binarySetInput(BinaryNode_t** binaryHeadNode) {
     } while (strcmp(data, "stop") < 0);
 }
 
-void deleteBinarySet(BinaryNode_t *head) {
+void deleteBinarySet(BinaryNode_t* head) {
     BinaryNode_t* temporary;
     while (head != NULL) {
         temporary = head;
