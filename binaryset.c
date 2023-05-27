@@ -68,7 +68,7 @@ bool isBinary(char data[]) {
 void printDecimalSet(BinaryNode_t* binaryHeadNode) {
     puts("Converted binary set:");
     int decimalNum;
-    BinaryNode_t *currentNode = binaryHeadNode;
+    BinaryNode_t* currentNode = binaryHeadNode;
     while (currentNode != NULL) {
         decimalNum = binaryToDec(currentNode->data);
         currentNode = currentNode->pointer;
