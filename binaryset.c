@@ -8,17 +8,11 @@ BinaryNode_t *createBinaryNode(char *data) {
 }
 
 void binarySetInput(BinaryNode_t **binaryHeadNode) {
-    char setLenStr[DATA_SIZE], data[DATA_SIZE];
-    int setLen;
+    char data[DATA_SIZE];
     int counter = 0;
     BinaryNode_t *binaryTemporaryNode;
+    puts("Enter set components, to stop print \"stop\"");
     do {
-        puts("Enter size of binary digit set");
-        scanf("%s", setLenStr);
-    } while (!isInt(setLenStr));
-    setLen = (int) strtol(setLenStr, NULL, 10);
-    puts("Enter set components");
-    while (counter < setLen) {
         scanf("%s", data);
         if (isBinary(data)) {
             if (isUniqueNode(*binaryHeadNode, data)) {
@@ -28,9 +22,8 @@ void binarySetInput(BinaryNode_t **binaryHeadNode) {
                 counter++;
             } else
                 puts("This number is not unique! Try again");
-        } else
-            puts("Please enter a binary digit!");
-    }
+        }
+    } while (strcmp(data, "stop") < 0);
 }
 
 void deleteBinarySet(BinaryNode_t *head) {
