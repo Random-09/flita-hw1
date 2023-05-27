@@ -1,16 +1,16 @@
 #include "binaryset.h"
 
-BinaryNode_t *createBinaryNode(char *data) {
-    BinaryNode_t *node = malloc(sizeof(BinaryNode_t));
+BinaryNode_t* createBinaryNode(char* data) {
+    BinaryNode_t* node = malloc(sizeof(BinaryNode_t));
     strcpy(node->data, data);
     node->pointer = NULL;
     return node;
 }
 
-void binarySetInput(BinaryNode_t **binaryHeadNode) {
+void binarySetInput(BinaryNode_t** binaryHeadNode) {
     char data[DATA_SIZE];
     int counter = 0;
-    BinaryNode_t *binaryTemporaryNode;
+    BinaryNode_t* binaryTemporaryNode;
     puts("Enter set components, to stop print \"stop\"");
     do {
         scanf("%s", data);
@@ -27,7 +27,7 @@ void binarySetInput(BinaryNode_t **binaryHeadNode) {
 }
 
 void deleteBinarySet(BinaryNode_t *head) {
-    BinaryNode_t *temporary;
+    BinaryNode_t* temporary;
     while (head != NULL) {
         temporary = head;
         head = head->pointer;
@@ -35,16 +35,16 @@ void deleteBinarySet(BinaryNode_t *head) {
     }
 }
 
-void printBinarySet(BinaryNode_t *head) {
+void printBinarySet(BinaryNode_t* head) {
     puts("Binary set:");
-    BinaryNode_t *temporary = head;
+    BinaryNode_t* temporary = head;
     while (temporary != NULL) {
         printf("%s\n", temporary->data);
         temporary = temporary->pointer;
     }
 }
 
-bool isUniqueNode(BinaryNode_t *head, char *data) {
+bool isUniqueNode(BinaryNode_t* head, char* data) {
     while (head != NULL) {
         if (strcmp(head->data, data) == 0)
             return false;
@@ -65,7 +65,7 @@ bool isBinary(char data[]) {
     return isBinary;
 }
 
-void printDecimalSet(BinaryNode_t *binaryHeadNode) {
+void printDecimalSet(BinaryNode_t* binaryHeadNode) {
     puts("Converted binary set:");
     int decimalNum;
     BinaryNode_t *currentNode = binaryHeadNode;
@@ -76,7 +76,7 @@ void printDecimalSet(BinaryNode_t *binaryHeadNode) {
     }
 }
 
-int binaryToDec(char *data) {
+int binaryToDec(char* data) {
     int pow = 1;
     int decimalNum = 0;
     for (int i = (int) strlen(data) - 1; i != -1; i--) {
