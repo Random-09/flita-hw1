@@ -65,14 +65,6 @@ bool isBinary(char data[]) {
     return isBinary;
 }
 
-bool isInt(char setLenStr[64]) {
-    for (int i = 0; i < strlen(setLenStr); i++) {
-        if (!isdigit(setLenStr[i]))
-            return false;
-    }
-    return true;
-}
-
 void printDecimalSet(BinaryNode_t *binaryHeadNode) {
     puts("Converted binary set:");
     int decimalNum;
