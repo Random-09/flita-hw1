@@ -10,8 +10,8 @@ BinaryNode_t* createBinaryNode(char* data) {
 void binarySetInput(BinaryNode_t** binaryHeadNode) {
     char data[DATA_SIZE];
     int counter = 0;
-
     BinaryNode_t* binaryTemporaryNode;
+
     puts("Enter set components, to stop print \"stop\"");
 
     do {
